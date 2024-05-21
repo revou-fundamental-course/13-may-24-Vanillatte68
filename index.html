@@ -1,4 +1,154 @@
 <!DOCTYPE html>
-<html>
-  <body></body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Calculator</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- title -->
+    <section class="title_wrap">
+      <div>
+        <h1 class="main_title">My Calculator</h1>
+        <p>
+          Gunakan kalkulator berikut untuk menghitung keliling atau luas
+          segitiga
+        </p>
+      </div>
+    </section>
+
+    <!-- tab -->
+    <div>
+      <button
+        class="tab_btn"
+        id="defaultTab"
+        onclick="clickHandle(event, 'keliling')"
+      >
+        Keliling
+      </button>
+      <button class="tab_btn" onclick="clickHandle(event, 'luas')">Luas</button>
+    </div>
+
+    <!-- keliling segitiga -->
+    <section class="content" id="keliling">
+      <div class="content_title">
+        <h2>Keliling Segitiga</h2>
+      </div>
+      <div class="wrap" style="display: flex">
+        <img src="./assets/thumb.jpg" />
+        <div id="detail">
+          <span
+            >Keterangan:<br />a = Sisi a<br />b = Sisi b<br />c = Sisi c</span
+          >
+          <span id="kllHasil"></span>
+        </div>
+        <div class="content_calc">
+          <form id="keliling_form" name="keliling_form" class="calcForm">
+            <label>A</label>
+            <input
+              id="sisi_a"
+              name="sisi_a"
+              type="text"
+              inputmode="numeric"
+              alt="sisi_a"
+              placeholder="Sisi A"
+              autocomplete="off"
+              required
+            />
+            <label>B</label>
+            <input
+              id="sisi_b"
+              name="sisi_b"
+              type="text"
+              inputmode="numeric"
+              alt="sisi_b"
+              placeholder="Sisi B"
+              autocomplete="off"
+              required
+            />
+            <label>C</label>
+            <input
+              id="sisi_c"
+              name="sisi_c"
+              type="text"
+              inputmode="numeric"
+              alt="sisi_c"
+              placeholder="Sisi C"
+              autocomplete="off"
+              required
+            />
+            <div
+              style="
+                display: flex;
+                justify-content: end;
+                margin-top: 10px;
+                gap: 10px;
+              "
+            >
+              <button type="submit" id="submit">Hitung</button>
+              <button type="reset" id="reset">Hapus</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- luas segitiga -->
+    <section class="content" id="luas">
+      <div class="content_title">
+        <h2>Luas Segitiga</h2>
+      </div>
+      <div class="wrap" style="display: flex">
+        <img src="./assets/thumb.jpg" />
+        <div id="detail">
+          <span>Keterangan:<br />t = Tinggi<br />a = Alas</span>
+          <span id="luasHasil"></span>
+        </div>
+        <div class="content_calc">
+          <form id="luas_form" name="luas_form" class="calcForm">
+            <label>Tinggi</label>
+            <input
+              id="tinggi"
+              name="tinggi"
+              type="text"
+              inputmode="numeric"
+              alt="tinggi"
+              placeholder="Tinggi"
+              autocomplete="off"
+              required
+            />
+            <label>Alas</label>
+            <input
+              id="alas"
+              name="alas"
+              type="text"
+              inputmode="numeric"
+              alt="alas"
+              placeholder="Alas"
+              autocomplete="off"
+              required
+            />
+            <div
+              style="
+                display: flex;
+                justify-content: end;
+                margin-top: 10px;
+                gap: 10px;
+              "
+            >
+              <button type="submit" id="submit">Hitung</button>
+              <button type="reset" id="reset">Hapus</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>Copyright &copy; 2024 RevoU Fundamental Course Mini Project</div>
+    </footer>
+
+    <script src="./script/script.js" defer></script>
+  </body>
 </html>

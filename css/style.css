@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #dfe3ee;
+  margin-bottom: 2rem;
+  font-size: 18px;
+}
+
+input {
+  padding: 0.5rem;
+  border-radius: 3px;
+  border: solid 1px;
+  border-style: solid;
+  border-color: #a6a7a6;
+}
+
+img {
+  height: 250px;
+  padding-bottom: 15px;
+}
+
+button {
+  padding: 0.8rem;
+  cursor: pointer;
+  border-radius: 15px;
+  border: 3px;
+  border-style: solid;
+  background-color: transparent;
+}
+
+.tab_btn {
+  border: none;
+  background-color: #a6a7a6;
+  color: black;
+  font-size: medium;
+  font-weight: 700;
+  width: 100px;
+}
+
+.tab_btn:hover {
+  background-color: rgb(218, 188, 24);
+  transition: 0.3s;
+}
+
+.tab_btn.active {
+  background-color: gold;
+  border: none;
+}
+
+#submit {
+  color: #22c55e;
+  border-color: #22c55e;
+}
+
+#submit:hover {
+  border-color: transparent;
+  color: white;
+  background-color: #22c55e;
+  transition: ease-in-out 0.4s;
+}
+
+#reset {
+  color: crimson;
+  border-color: crimson;
+}
+
+#reset:hover {
+  border-color: transparent;
+  color: white;
+  background-color: crimson;
+  transition: ease-in-out 0.4s;
+}
+
+.content {
+  display: none;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0 0.5rem 1.5rem rgba(22, 28, 45, 0.1);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: fit-content;
+}
+
+.title_wrap {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.main_title {
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+.content_title {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-color: gold;
+  border-bottom: 1px;
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.content_calc {
+  padding: 1.25rem;
+  font-size: 15px;
+  text-align: start;
+}
+
+#detail {
+  display: flex;
+  flex-direction: column;
+  margin: 1.25rem 1.25rem 0;
+  gap: 1rem;
+  font-size: 14px;
+}
+
+.calcForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+footer {
+  background-color: gold;
+  color: black;
+  text-align: center;
+  font-size: 10px;
+  padding: 6px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  position: fixed;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  img {
+    max-width: 275px;
+    height: auto;
+  }
+  .wrap {
+    flex-direction: column;
+  }
+  #detail {
+    flex-direction: row;
+    gap: 0;
+    justify-content: space-between;
+  }
+}
