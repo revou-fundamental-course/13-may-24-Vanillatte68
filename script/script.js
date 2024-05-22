@@ -44,7 +44,6 @@ keliling_form.addEventListener("submit", function (event) {
 
     kllHasil.innerHTML = "";
     kllHasil.innerHTML += `<span>Hasil:<br/>K = A + B + C<br/>K = ${sisi_a} + ${sisi_b} + ${sisi_c}<br/>K = ${kll}</span>`;
-    console.log(kll);
   } else {
     alert("Masukkan angka 0-9");
   }
@@ -67,8 +66,14 @@ luas_form.addEventListener("submit", function (event) {
 
     luasHasil.innerHTML = "";
     luasHasil.innerHTML += `<span>Hasil:<br/>L = (Tinggi x Alas) / 2<br/>L = (${tinggi} x ${alas}) / 2<br/>L = ${luas}</span>`;
-    console.log(luas);
   } else {
     alert("Masukkan angka 0-9");
   }
 });
+
+function resetForm() {
+  keliling_form.reset();
+  luas_form.reset();
+  document.getElementById("kllHasil").innerHTML = "";
+  document.getElementById("luasHasil").innerHTML = "";
+}
